@@ -1,3 +1,6 @@
 **/sdk/
 **/.venv/
 **/__pycache__/
+**/target/
+**/.idea/
+**/.tmp/

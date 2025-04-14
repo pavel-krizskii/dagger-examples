@@ -1,16 +1,16 @@
-### This is a quick demo of how to build, test, and publish the "spring-petclinic" app using Dagger with Java SDK.
+### This is a quick demo of how to build, test, and publish the "spring-petclinic" app using Dagger with Python SDK.
 
 ##### Clone this repo
 ```git clone https://github.com/pavel-krizskii/dagger-examples.git```
 
 ##### Change working dir
-```cd dagger-examples/spring-petclinic/java```
+```cd dagger-examples/spring-petclinic/python```
 
 ##### Install Dagger
-```curl -fsSL https://dl.dagger.io/dagger/install.sh | DAGGER_VERSION=0.18.2 BIN_DIR=./.tmp/dagger sh```
+```curl -fsSL https://dl.dagger.io/dagger/install.sh | DAGGER_VERSION=0.18.2 BIN_DIR=./.venv/dagger sh```
 
 ##### Prepend PATH with installed Dagger
-```export PATH=./.tmp/dagger:$PATH```
+```export PATH=./.venv/dagger:$PATH```
 
 ##### Run Dagger Shell
 ```dagger```

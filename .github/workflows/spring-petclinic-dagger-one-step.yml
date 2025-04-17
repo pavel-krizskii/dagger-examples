@@ -1,0 +1,19 @@
+name: dagger
+on:
+  push:
+    branches: [main]
+
+jobs:
+  spring-petclinic-build-test-publish:
+    name: build-test-publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Build, test, and publish the "spring-petclinic" app using Dagger
+        uses: dagger/dagger-for-github@8.0.0
+        with:
+          version: "0.18.2"
+          verb: call
+          workdir: ./spring-petclinic/python
+          args: publish

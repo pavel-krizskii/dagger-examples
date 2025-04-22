@@ -32,17 +32,17 @@ class SpringPetclinic:
         )
 
     @function
-    def test(self) -> str:
-        return (
+    async def test(self) -> str:
+        return await (
             self.build_env()
             .with_exec(["mvn", "test"])
             .stdout()
         )
 
     @function
-    def publish(self) -> str:
-        self.test()
-        return (
+    async def publish(self) -> str:
+        await self.test()
+        return await (
             dag.container()
             .from_(SpringPetclinic.MAVEN_IMAGE)
             .with_directory("/app", self.build())
